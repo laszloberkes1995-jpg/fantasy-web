@@ -10,6 +10,7 @@
     background-size: cover;
     transition: 8s;
     overflow: hidden;
+    cursor: url("images/hand.cur") 0 0, auto;
 }
 
 .pergament:hover{
