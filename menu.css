@@ -1,0 +1,72 @@
+.sticky-navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header{
+    background-color: hsl(0, 0%, 0%,0.6);
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    padding: 20px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: var(--bgcolor);
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 20px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    cursor: url(/images/hand.cur)0 0,pointer;
+}
+
+nav ul li a:hover{
+    background-color: black;
+}
+
+/* DROPDOWN */
+
+.dropdown{
+    position: relative;
+    display: none;
+    box-shadow: 3px 3px 3px black;
+}
+
+.dropdown a{
+    border: 2px solid black;
+}
+
+.content:hover .dropdown{
+    position: absolute;
+    display: block;
+    background-color: var(--bgcolor);
+}
+
+.dropdown-item-container{
+    position: relative;
+}
+
+.nested-dropdown{
+    display: none;
+}
+
+.dropdown-item-container:hover .nested-dropdown{
+    display: block;
+    position: absolute;
+    background-color: hsl(0, 0%, 0%,0.4);
+    top: 0;
+    left: 100%;
+    min-width: 250px;
+    box-shadow: 3px 3px 3px black;
+}

@@ -1,0 +1,98 @@
+.pergament{
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    background-image: url(/images/pergament.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 8s;
+    overflow: hidden;
+}
+
+.pergament:hover{
+    transform-style: preserve-3d;
+    transform: scale(1.2);
+    z-index: 1000;
+}
+
+.registration-form{
+    font-size: 12px;
+    font-family: Segoe Script;
+    font-weight: bold;
+    text-align: center;
+    /* margin: 15px; */
+    max-height: 300px;
+    max-width: 300px;
+    color: brown;
+    text-shadow: 1px 1px 1px black;
+    overflow-y:auto;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.registration-form input,
+.registration-form select{
+    font-family: Segoe Script;
+    font-size: 1rem;
+    background-color: var(--bgcolor);
+    border: none;
+    border-bottom: 2px solid brown;
+    color: hsl(32, 38%, 21%);
+    padding: 5px;
+    outline: none;
+    transition: border-bottom 0.3s;
+}
+
+.registration-form input:focus{
+    border-bottom: 2px solid gold;
+}
+
+.submit-btn{
+    background-color: brown;
+    color: white;
+    box-shadow: 2px 2px 5px var(--bgcolor);
+    border: 2px solid #4a3721;
+    cursor: url(hand.cur) 0 0, pointer;
+    font-weight: bold;
+    font-family: Segoe Script;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: gold;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Scrollbar */
+
+.registration-form::-webkit-scrollbar{
+    width: 10px;
+}
+
+.registration-form::-webkit-scrollbar-track{
+    background-color: hsla(0, 32%, 30%, 0.4);
+    border-radius: 20px;
+}
+
+.registration-form::-webkit-scrollbar-thumb{
+    background-color: hsla(5, 64%, 67%, 0.4);
+    border-radius: 20px;
+    border: 2px solid brown;
+}
+
+.registration-form::-webkit-scrollbar-thumb:hover{
+    background-color: hsla(0, 29%, 42%, 0.4);
+    border-radius: 20px;
+    border: 2px solid brown;
+}

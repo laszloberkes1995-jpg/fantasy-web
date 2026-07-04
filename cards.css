@@ -1,0 +1,135 @@
+@keyframes pulse-glow{
+    0%{filter: brightness(1) drop-shadow(0px 0px 5px gold);}
+    50%{filter: brightness(1.2) drop-shadow(0px 0px 20px gold);}
+    100%{filter: brightness(1) drop-shadow(0px 0px 5px gold);}}
+
+@keyframes deal-card{
+    from{
+        opacity: 0; 
+        transform: translateY(50px) rotate(-10deg);}
+    to{
+        opacity: 1; 
+        transform: translateY(0px) rotate(0deg);}}
+
+.pokemoncontainer{
+    perspective: 1000px;
+    width: 270px;
+    height: 300px;
+    margin: 10px;
+    opacity: 0; 
+    animation: deal-card 0.8s ease-in-out forwards;
+    animation-delay: calc(var(--order) * 0.2s);}
+
+.pokemongames{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;}
+
+.pokemoncontainer:hover .pokemongames {
+    transform: rotateY(180deg);}
+
+.pokemoncontainer:hover{
+    animation: pulse-glow 2s infinite ease-in-out, deal-card 0.8s ease-in-out forwards;}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 15px;}
+
+.front::after, .back::after {
+    content: "";
+    position: absolute;
+    top: -50%; 
+    left: -150%;
+    width: 200%; 
+    height: 200%;
+    
+    background: linear-gradient(
+        30deg,
+        rgba(255, 255, 255, 0) 0%,     
+        rgba(255, 255, 255, 0) 40%,    
+        rgba(255, 255, 255, 0.8) 50%,  
+        rgba(255, 255, 255, 0) 60%,    
+        rgba(255, 255, 255, 0) 100% );
+    
+    transition: left 0.6s ease-in-out; 
+    
+    pointer-events: none;
+    z-index: 2;
+}
+.pokemoncontainer:hover .front::after,
+.pokemoncontainer:hover .back::after {
+    left: 150%;
+}
+
+#violetfront{
+    background-image: url(/images/violetfront-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;}
+
+#violetback{
+    background-image: url(/images/violetback-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotateY(180deg);}
+
+#swordfront{
+    background-image: url(/images/swordfront-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;}
+
+#swordback{
+    background-image: url(/images/swordback-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotateY(180deg);}
+
+#arceusfront{
+    background-image: url(/images/arceusfront-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;}
+
+#arceusback{
+    background-image: url(/images/arceusback-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotateY(180deg);}
+
+#pikachufront{
+    background-image: url(/images/pikachufront-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;}
+
+#pikachuback{
+    background-image: url(/images/pikachuback-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotateY(180deg);}
+
+#diamondfront{
+    background-image: url(/images/diamondfront-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;}
+    
+#diamondback{
+    background-image: url(/images/diamondback-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotateY(180deg);}

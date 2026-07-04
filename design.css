@@ -1,0 +1,135 @@
+:root {
+    --animation-time: 30s;
+    --hundred-percent: 100%;
+    --zero: 0;
+    --bgcolor: hsl(0, 0%, 0%, 0.3);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: url(/images/magicwand.png) 0 0, auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Megakadályozza az oldalirányú csúszkálást */
+}
+
+/* HÁTTÉR ANIMÁCIÓ */
+body::before {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: magic-sky var(--animation-time) infinite linear;
+}
+
+@keyframes magic-sky {
+    0% { filter: hue-rotate(0deg) brightness(1); }
+    50% { filter: hue-rotate(180deg) brightness(1.2); }
+    100% { filter: hue-rotate(360deg) brightness(1); }
+}
+
+main {
+    flex: 1; /* Ez a rugó, ami lefelé tolja a footert */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--bgcolor);
+    color: white;
+    text-align: center;
+    border-top: 2px solid gold;
+    padding: 20px; /* Több hely a Pikachunak */
+}
+
+/* PIKACHU JAVÍTÁSA */
+.detective-pikachu {
+    position: absolute;
+    bottom: 5px; /* A lábléc aljához igazítjuk, nem a tetejéhez */
+    left: 0;
+    width: 60px; /* Mobilon picit kisebb, hogy ne takarjon ki mindent */
+    height: 60px;
+    background-image: url(/images/walkingpikachu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: walking-patrol 10s linear infinite;
+    z-index: 10;
+}
+
+@keyframes walking-patrol {
+    0% { left: 0%; transform: scaleX(1); }
+    49% { left: calc(100% - 60px); transform: scaleX(1); }
+    50% { left: calc(100% - 60px); transform: scaleX(-1); }
+    99% { left: 0; transform: scaleX(-1); }
+    100% { left: 0; transform: scaleX(1); }
+}
+
+
+@media screen and (max-width: 480px){
+    body{
+        display: flex;
+        flex-direction: column;
+        width: 480px;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        box-sizing: border-box;
+        padding: 20px;
+        flex: 1;
+    }
+
+    footer{
+        margin-top: auto;
+        position: relative;
+        bottom: 0;
+    }
+    .pergament {
+        width: 90vw;
+        height: auto;
+        min-height: 450px;
+        background-size: 100% 100%;
+        transform: none!important;
+        font-size: 16px;
+    }
+    
+    .registration-form {
+        max-width: 85%;
+    }
+       
+}
+
+ @media (hover: hover) {
+    .pergament:hover {
+        transform: scale(1.1);
+        z-index: 100;
+        transition: 0.5s;
+    }
+} 

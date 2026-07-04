@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown menu</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="cards.css">
+</head>
+<body>
+    <div class="sticky-navbar">
+        <header>
+            <h1>Welcome to my Fantasy</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="01.html">Home</a></li>
+                <li class="content"><a href="">About</a>
+                    <div class="dropdown">
+                        <div class="dropdown-item-container">
+                        <a href="#">Pokemon Games >>></a>
+                            <div class="nested-dropdown">
+                            <a href="#">Pokemon Violet</a>
+                            <a href="#">Pokemon Sword</a>
+                            <a href="#">Legends of Arceus</a>
+                            </div>
+                        </div>
+                    <a href="#">Day OFF</a>
+                    <a href="#">Learn Webdevelopment</a>
+                    <a href="#">Other Games</a>
+                    </div>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+
+            <div class="pokemoncontainer" style="--order: 1">
+                <div class="pokemongames">
+                 <div class="front" id="violetfront"></div>
+                 <div class="back" id="violetback"></div>
+                </div>
+            </div>
+
+
+            <div class="pokemoncontainer" style="--order: 2">
+                <div class="pokemongames">
+                 <div class="front" id="swordfront"></div>
+                 <div class="back" id="swordback"></div>
+                </div>
+            </div>
+
+         
+            <div class="pokemoncontainer" style="--order: 3">
+                <div class="pokemongames">
+                 <div class="front" id="arceusfront"></div>
+                 <div class="back" id="arceusback"></div>
+                </div>
+            </div>
+         
+                <div class="pokemoncontainer" style="--order: 4">
+                <div class="pokemongames">
+                 <div class="front" id="pikachufront"></div>
+                 <div class="back" id="pikachuback"></div>
+                </div>
+            </div>
+
+                <div class="pokemoncontainer" style="--order: 5">
+                <div class="pokemongames">
+                 <div class="front" id="diamondfront"></div>
+                 <div class="back" id="diamondback"></div>
+                </div>
+            </div>
+        
+    </main>
+    <footer>
+       <p><div class="detective-pikachu"></div>&copy; All rights reserved</p>
+    </footer>
+</body>
+</html>

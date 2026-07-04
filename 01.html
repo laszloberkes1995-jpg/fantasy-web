@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown menu</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="pergament.css">
+</head>
+<body>
+    <div class="sticky-navbar">
+        <header>
+            <h1>Welcome to my Fantasy</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="01.html">Home</a></li>
+                <li class="content"><a href="">About</a>
+                    <div class="dropdown">
+                        <div class="dropdown-item-container">
+                        <a href="#">Pokemon Games >>></a>
+                            <div class="nested-dropdown">
+                            <a href="#">Pokemon Violet</a>
+                            <a href="#">Pokemon Sword</a>
+                            <a href="#">Legends of Arceus</a>
+                            </div>
+                        </div>
+                    <a href="#">Day OFF</a>
+                    <a href="#">Learn Webdevelopment</a>
+                    <a href="#">Other Games</a>
+                    </div>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="pergament">
+        <div class="registration-form">
+            <h2>Registration Form</h2>
+        <form method="post">
+
+        <div class="input-group">
+        <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        
+        </div>
+
+        <div class="input-group">
+        <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="input-group">
+          <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" required>
+        </div>
+
+        <div class="input-group">
+        <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="input-group">
+        <label for="version">Select a version:</label>
+            <select id="version" name="version">
+                <option disabled selected>--Select a version--</option>
+                <option>Pokemon Darkness</option>
+                <option>Pokemon Brightness</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="submit-btn">Start The New Adventure</button>
+    </form>
+        
+        </div>
+    </div>
+</main>
+    <footer>
+        <div class="detective-pikachu"></div>
+       <p>&copy; All rights reserved</p>
+    </footer>
+
+</body>
+</html>
